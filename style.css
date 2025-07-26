@@ -1,0 +1,450 @@
+:root {
+    --delft-blue: #333661ff;
+    --ultra-violet: #4a4c85ff;
+    --white: #ffffffff;
+    --majorelle-blue: #7f4bdeff;
+    --wisteria: #b99bf5ff;
+    --space-cadet: #242746ff; 
+    --white: #ffffffff;
+    --majorelle-blue: #7f4bdeff;
+    --wisteria: #b99bf5ff;
+}
+
+/* Estilos generales */
+.banner{
+    position: relative;  /* esto soluciona el error de que la presentacion se salga del banner al hacer zoom*/
+    max-height: 990px; /* Altura máxima de la imagen */
+    background-image: url(imagenes/fondoia.png);
+    background-size: cover;/* la imagen en todo el área */
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    height: 990px;
+    width: 100%;
+    margin: 20px auto; /* Centra la imagen */
+    display: flex;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.3); /* Sombrita*/
+}
+.intro {
+    max-height: 990px; /* Altura máxima de la imagen */
+    position: absolute;
+    color: var(--white); 
+    font-family: cursive; 
+    font-size: 20px; 
+    padding: 20px; 
+    text-align: center; 
+    left: -2%; /* Centra horizontalmente */
+    width: 40%; /* Ancho */
+    bottom: 0; /* Alinea al final del banner */
+    top: 0; /* Centra verticalmente */
+    padding: 400px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.fotoPerfil {
+    border-radius: 100%;
+    border: solid;
+    border-color: var(--space-cadet); 
+    margin: 20px; /* Centra la imagen */
+    height: 270px;
+    width: 270px; /* Asegura que la imagen sea circular */
+    position:relative; /* Permite mover la foto */
+    bottom: -50px;
+    z-index: 1;
+    left: 50%;
+}
+
+.intro h1 {
+    font-size: 70px; 
+    margin: 10px; 
+    color: var(--white); 
+    background-color: none;
+}
+.columnas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que se acomoden en varias filas */
+    justify-content: space-around;
+    gap: 20px;
+
+    
+    padding: 40px;
+    
+}
+.columna{
+     flex: 1 1 calc(33.333% - 40px);
+  max-width: calc(33.333% - 40px);
+  background: linear-gradient(
+    to bottom right,
+    var(--delft-blue),
+    var(--ultra-violet)
+  );
+  border-radius: 20px;
+  padding: 40px;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  cursor: pointer; 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* más opaca y más fuerte */
+}
+.columna h1 {
+    background-color: var(--ultra-violet); 
+}
+
+.columna img {
+    transform: translateX(-4%); /* Centra la imagen horizontalmente */
+}
+
+/*hover*/
+.columna:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+  transition: all 0.3s ease;
+}
+
+button.cerrarPopup:hover {
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+  transform: scale(1.3); 
+  transition: all 0.3s ease; 
+}
+
+/*etiquetas*/
+header {
+    padding: 20px; 
+    margin: 20px;
+    text-align: center;
+}
+body {
+    background-color: #242746;
+  background-image: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%);
+  background-size: 80px 80px;  /* tamaño del fondo de cuadritos */
+    color: var(--white); 
+    font-family: cursive; 
+}
+li{
+    color: var(--white); 
+    font-family: cursive;
+    font-size: 30px;
+    padding: 20px;
+    text-align: left;
+}
+h1 {
+    color: var(--white); 
+    font-family: cursive;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+img {
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    margin: 20px;
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+li{
+    font-size: 60px; 
+    
+}
+span {
+    cursor: pointer; 
+    border: none;
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s ease; 
+    font-size: 100px;
+    
+    
+}
+/*poppup*/
+.popup{
+    display: none; /* Oculta el popup por defecto */
+    position: fixed; 
+    opacity: 0; /* Transparente por defecto */
+    transform: scale(0.8); /* Escala inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1; /* ENCIMA DE TODO */
+ }
+
+ /* transición al abrir popup */
+ /* No agregamos display ya que eso cancela la animación, eso se manipula en javascript*/
+ .mostrarPopup{
+    opacity: 1; /* Totalmente visible */
+    transform: scale(1); /* Escala normal */
+ }
+/* transición al cerrar popup */
+ .ocultar {
+  opacity: 0;   
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popupInfo {
+    background: linear-gradient(
+    to bottom right,
+    var(--delft-blue),
+    var(--ultra-violet)
+  );
+    color: var(--white); 
+    width: 25% ; /* Ancho del popup */
+    padding: 20px; /* Espacio */
+    box-shadow: 0 0 160px rgba(0, 0, 0, 0.2);
+    overflow: auto; /* Permite hacer scroll dentro del popup */
+}
+
+.popupInfo h1 {
+    font-size: 40px; 
+    background-color: var(--ultra-violet);
+}
+.popupInfo p {
+    font-size: 15px; 
+    background-color: var(--delft-blue);
+}
+
+.popupInfo h2 {
+    font-size: 20px; 
+}
+
+.popupInfo li {
+    font-size: 15px;
+    background-color: var(--delft-blue);
+}
+.popupImg {
+    width: 50%; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra */
+    margin-top: 20px; /* Espacio superior */
+    position: absolute;
+    top: 14%; /* Centra verticalmente */
+    left: 40%; /* Centra horizontalmente */
+}
+
+/* @media para telefonos */
+@media (max-width: 768px) {
+
+      .banner {
+    top: -20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+    background-position-x: 50%;
+  }
+
+  .intro {
+    position: absolute;
+    left: 0;
+    
+    margin: auto;
+    width: 40%;
+    padding-top: 450px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+   .fotoPerfil {
+    position: static;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px auto;
+    display: block; /* Centra la imagen */
+    position: absolute;
+    top: 250px; /* Alinea al inicio del banner */
+    left:7%; /* Centra horizontalmente */
+    z-index: 1;
+}   
+
+    .intro h1 {
+        font-size: 40px; /* Tamaño de fuente más pequeño */
+        margin: 10px; 
+    }
+    .intro h2 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+        margin: 10px; 
+    }
+    .intro p {
+        font-size: 15px; /* Tamaño de fuente más pequeño */
+        margin: 10px; 
+    }
+
+    .columnas {
+        flex-direction: column; /* Cambia a una sola columna */
+        align-items: center; /* Centra las columnas */;
+    }
+    .columnas img {
+        transform: translateX(-4%); /* Centra la imagen horizontalmente */
+    }
+    .columna {
+        flex: 1 1 100%; /* Ocupa todo el ancho */
+        max-width: 100%; /* Asegura que ocupe todo el ancho */
+        font-size: 20px;
+    }
+   
+    .popup {
+        width: 100%; /* Ancho completo en móviles */
+        height: 100%; /* Alto completo en móviles */
+        padding: 20px; 
+        position: fixed; /* Fijo en la pantalla */
+        top: 0; /* Alinea al inicio de la pantalla */
+        left: 0;
+        overflow-y: auto; /* Permite hacer scroll */
+    }
+
+    .popupInfo {
+        overflow: auto; /* Permite hacer scroll dentro del popup y hace que todo este adentro del recuadro del popupInfo, SOLUCIONA LA VIDA*/
+        padding: 20px;  
+        margin: 20px 42px 42px 18px; 
+        width: fit-content;
+        box-shadow: 0 0 160px rgba(0, 0, 0, 0.2); 
+    }
+    .popupInfo span {
+        position: absolute; /* Fijo en la esquina */
+        top: 20px; 
+        right: 50px; 
+        font-size: 40px; 
+        color: none;
+    }
+    .popupInfo h1 {
+        font-size: 40px; 
+    }
+    .popupInfo p {
+        font-size: 15px; 
+    }
+    .popupInfo h2 {
+        font-size: 20px; 
+    }
+    .popupInfo li {
+        font-size: 15px;
+    }
+    .popupImg {
+        width: 100%; 
+        height: auto; /* Mantiene la proporción de la imagen */
+        position: relative; /* sigue el orden o el flujo del documento */
+        left:  0; 
+        top: 0; 
+        transform: translateX(-4%); /* Centrar horizontalmente */
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 768px) and (orientation: landscape)
+{
+    .banner {
+        height: 100vh; /* Altura completa de la pantalla */
+        background-position-y: 0; /* Ajusta la posición de fondo */
+    }
+   
+        
+    .intro {
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 40%;
+        padding-top: 300px;
+        padding-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }   
+   
+    .fotoPerfil {
+        position: static;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 20px auto;
+        display: block; /* Centra la imagen */    
+        top: 90px; /* Alinea al inicio del banner */
+        left:7%; /* Centra horizontalmente */
+        z-index: 1;
+    }
+
+    .columna p{
+        font-size: 3px; /* Tamaño de fuente más pequeño */
+    }
+    .intro h1 {
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+    .intro h2 {
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+    .intro p {
+        font-size: 7px; /* Tamaño de fuente más pequeño */
+    }
+    .columnas {
+        flex-direction: column; /* Cambia a una sola columna */
+        align-items: center; /* Centra las columnas */
+    }
+    .columna {
+        flex: 1 1 100%; /* Ocupa todo el ancho */
+        max-width: 100%; /* Asegura que ocupe todo el ancho */
+        
+    }
+    
+    .popup {
+        width: 100%; /* Ancho completo en móviles */
+        height: 100%; /* Alto completo en móviles */
+        padding: 20px; 
+        position: fixed; /* Fijo en la pantalla */
+        top: 0; /* Alinea al inicio de la pantalla */
+        left: 0;
+        overflow-y: auto; /* Permite hacer scroll */
+    }
+    .popupInfo {
+        overflow: auto; /* Permite hacer scroll dentro del popup y hace que todo este adentro del recuadro del popupInfo, SOLUCIONA LA VIDA*/
+        padding: 20px;  
+        margin: 20px 42px 42px 18px; 
+        width: fit-content;
+        box-shadow: 0 0 160px rgba(0, 0, 0, 0.2); 
+    }
+    .popupInfo span {
+        position: absolute; /* Fijo en la esquina */
+        top: 20px; 
+        right: 50px; 
+        font-size: 40px; 
+        color: none;
+    }
+    .popupInfo h1 {
+        font-size: 30px; 
+    }
+    .popupInfo p {
+        font-size: 15px; 
+    }
+    .popupInfo h2 {
+        font-size: 20px; 
+    }
+    .popupInfo li {
+        font-size: 15px;
+    }
+
+    .popupImg {
+        width: 100%; 
+        height: auto; /* Mantiene la proporción de la imagen */
+        position: relative; /* sigue el orden o el flujo del documento */
+        left:  0; 
+        top: 0; 
+        transform: translateX(-4%); /* Centrar horizontalmente */
+        margin-bottom: 20px;
+    }
+    .cerrarPopup {
+        position: absolute; /* Fijo en la esquina */
+        top: 20px; 
+        right: 20px; 
+        font-size: 40px; 
+        color: var(--white); 
+        background-color: transparent; /* Fondo transparente */
+        border: none; /* Sin borde */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+    }
+
+}

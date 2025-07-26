@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imagenes/floppa2.webp">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>RanWeb</title>
+    </head>
+    <body>  
+<!-- BANNER -->
+        <div class="banner">
+            <header class="encabezado">
+                <img class="fotoPerfil" src="imagenes/perfil3.jpg" alt="" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="false"> 
+                <div class="intro" >  
+                    <h1 data-aos="zoom-up" data-aos-duration="1000">Randy web</h1> 
+                    <h2 data-aos="zoom-up" data-aos-duration="1000">Bienvenido a mi pagina web personal</h2>
+                    <p data-aos="zoom-up" data-aos-duration="1000">Aquí te mostrare mis avances en el mundo de la programación</p>
+                    <p data-aos="zoom-up" data-aos-duration="1000">¡Espero que disfrutes de mi pagina!🎨</p>
+                </div>
+            </header>
+        </div>
+            
+<!-- COLUMNAS  -->
+<div class="columnas">
+    <div class="columna" onclick="mostrarPopup1()" data-aos="zoom-in-right" data-aos-duration="1000">
+        <h1>🙋‍♂️ Acerca de mí</h1>
+        <img src="imagenes/popupyo.jpg">
+    </div>
+    <div class="columna" onclick="mostrarPopup2()" data-aos="zoom-in-left" data-aos-duration="1000">
+        <h1>📚 Competencias académicas</h1>
+        <img src="imagenes/popupcompetencias.jpg" alt="">
+    </div>
+    <div class="columna" onclick="mostrarPopup3()" data-aos="zoom-in-right" data-aos-duration="1000">
+        <h1>💻 Mis intereses en la programación</h1>
+        <img src="imagenes/popupprogra.jpg">
+    </div>  
+    <br>
+    <div class="columna" onclick="mostrarPopup4()" data-aos="zoom-in-left" data-aos-duration="1000">
+        <h1>🎨 Mis gustos</h1>
+        <img src="imagenes/popupgustos.jpg" alt="">
+    </div>
+    <div class="columna" onclick="mostrarPopup5()" data-aos="zoom-in-right" data-aos-duration="1000">
+        <h1>🚀 Mis proyectos en mente</h1>
+        <img src="imagenes/popupproyectos.jpg" alt="">
+    </div>
+    <div class="columna" onclick="mostrarPopup6()" data-aos="zoom-in-left" data-aos-duration="1000">
+        <h1>🎮 Mi primer videojuego</h1>
+        <img src="imagenes/popupfloppaintotheshadows.jpg" alt="">
+    </div>
+</div>
+
+    <!-- POPUP OCULTOS -->
+    <!-- POPUP1 -->
+<div class="popup" id="popup1" >
+    <div class="popupInfo">
+        <h1>🙋‍♂️ Acerca de mí</h1>
+            <p>Soy Randy Ruiz, tengo 17 años a creacion de esta pagina, soy bastante creativo y me llama la atención todo lo que puedo crear en el mundo digital.
+            soy un poco timido, pero aprecio mucho la compañia de los demás, soy extrovertido cuando me siento en confianza. Seguramente mis amigos mas cercanos esten leyendo esto, gracias por su apoyo muchachos🐱</p>
+        <h1>Como me anime a empezar a programar?</h1>
+            <p>Porque tengo varios proyectos en mente, me gusta la tecnologia desde pequeño. Quiero especializarme en esto a futuro, y me parece bastante comodo, ya se que bastante complicado, pero me daria satisfacción terminar mis proyectos.</p>
+        <h1>Como estoy aprendiendo?</h1>
+            <p>Por mi propia cuenta, con cursos en linea, experimentando y estoy ingresando papeleria para inscribirme en cursos del INTECAP en Guatemala.</p>
+            <p>Mis conocimientos actuales en <strong>HTML, CSS y JavaScript</strong> son gracias a <strong>MIMOapp</strong> una aplicación interactiva que consiste en lecciones diarias en donde todos los dias aprendo algo nuevo, y claro, lo anoto y lo aplico por mi cuenta.</p>
+        <img src="imagenes/popupyo.jpg" class="popupImg" >
+        <span class="cerrarPopup" onclick="cerrarPopup1()">❎</span>
+    </div>
+</div>
+
+    <!-- POPUP2 -->
+<div class="popup" id="popup2">
+    <div class="popupInfo">
+        <h1>📚 Competencias académicas</h1>
+            <p>A la fecha de esta página, estoy cursando mi diversificado, tengo el objetivo claro de estudiar ingeniería en sistemas en la universidad. Mi formación básica comenzó en Kinal, donde desarrollé un fuerte enfoque estudioso y la disciplina necesaria para seguir un buen camino.</p>
+            <p>Me considero una persona dedicada y comprometida, siempre buscando aprender más y superar mis propios límites. Actualmente, busco aprender mediante cursos en línea para fortalecer mis habilidades técnicas y prepararme para lo que venga.</p>
+            <p>Considero que mis habilidades son:</p>
+        <ul>
+            <li>🔍 Análisis lógico y resolución de problemas</li>
+            <li>📚 Habilidades de investigación y aprendizaje autodidacta</li>
+            <li>🗂️ Organización de proyectos y gestión del tiempo</li>
+            <li>💻 Uso eficiente de herramientas digitales</li>
+            <li>🤝 Trabajo en equipo y colaboración</li>
+            <li>🎨 Creatividad</li>
+            <li>📈 Adaptabilidad a nuevas tecnologías y problemas</li>
+            <li>🧠 Pensamiento crítico</li>
+            <li>🖌️ Habilidades de diseño gráfico básico</li>
+        </ul>
+            <p>Estoy en un proceso de fortalecimiento técnico.</p>
+        <span class="cerrarPopup" onclick="cerrarPopup2()">❎</span>
+        <img src="imagenes/popupcompetencias.jpg" class="popupImg">
+    </div>
+</div>
+
+    <!-- POPUP3 -->
+<div class="popup" id="popup3">
+    <div class="popupInfo">
+        <h1>💻 Mis intereses en la programación</h1>
+        <ul>
+            <li>🌐 <strong>Desarrollo web:</strong> crear páginas con diseño y funciones útiles.</li>
+            <li>⚙️ <strong>Automatización:</strong> hacer que tareas repetitivas se hagan solas con código.</li>
+            <li>🎮 <strong>Desarrollo de videojuegos:</strong> construir mis propias ideas en forma de juegos.</li>
+            <li>🧩 <strong>Diseño de interfaces:</strong> que lo que hago se vea bien y sea fácil de usar.</li>
+            <li>🔧 <strong>Mods para videojuegos:</strong> personalizar el juego y aprender Java mientras me divierto.</li>
+        </ul>
+            <p>Quiero aprender bien los lenguajes que necesito para lograr todo esto, como HTML, CSS, JavaScript, Python y Java.</p>
+        <span class="cerrarPopup" onclick="cerrarPopup3()">❎</span>
+        <img src="imagenes/popupprogra.jpg" class="popupImg">
+    </div>
+</div>
+
+    <!-- POPUP4 -->
+<div class="popup" id="popup4">
+    <div class="popupInfo">
+        <h1>🎨 Mis gustos</h1>
+            <p>Me gusta la pizza, el color verde, la música jazz, los videojuegos como Minecraft y de anime solo conozco Dragon Ball. </p>
+            <p>También me gustan mucho los animales, en especial los Floppas, unos felinos divertidos que se volvieron populares en memes.</p>
+            <p>Me gusta jugar, platicar y convivir con las personas aunque aveces me cueste un poco</p>
+        <span class="cerrarPopup" onclick="cerrarPopup4()">❎</span>
+        <img src="imagenes/popupgustos.jpg" class="popupImg">
+    </div>
+</div>
+
+    <!-- POPUP5 -->
+<div class="popup" id="popup5">
+    <div class="popupInfo">
+        <h1>🚀 Mis proyectos en mente</h1>
+            <p>Estoy aprendiendo a programar, y no solo porque sí, tengo planes y metas en mente, mira, esto es lo que quiero hacer a corto plazo: </p>
+        <ul>
+            <li>🎮 Crear un videojuego en Phyton, Floppa Into The Shadows.</li>
+            <li>💻 Aprender JavaScript para hacer páginas web más dinámicas y no tan simples, de hecho, use un poquito para algunas funciones en esta pagina.</li>
+            <li>🐍 Empezar con Python para entender mejor la lógica y automatizar cosas simples.</li>
+            <li>🔧 Aprender a programar mods para Minecraft en Java.</li>
+            <li>🖥️ Mejorar mi página web personal poco a poco, con nuevas secciones y mejor diseño.</li>
+        </ul>
+            <p>Todo lo estoy haciendo paso a paso, practicando y aprendiendo todos los días. Estoy investigando y experimentando🐱</p>
+        <span class="cerrarPopup" onclick="cerrarPopup5()">❎</span>
+        <img src="imagenes/popupproyectos.jpg" class="popupImg">
+    </div>
+</div>
+
+<!-- POPUP6 -->
+<div class="popup" id="popup6">
+    <div class="popupInfo">
+        <h1>🎮 Floppa Into the Shadows</h1>
+            <p>Estoy trabajando en un videojuego de terror llamado "Floppa Into the Shadows" En este juego, los jugadores deben explorar un entorno oscuro y aterrador, resolver acertijos y sobrevivir a los ataques del Floppa malvado. El objetivo es encontrar la salida antes de que el Floppa te atrape, mientras descubres misterios y te adentras en una historia turbia que hace contraste con el tono humoristico del juego de floppa.</p>
+            <p>Es un proyecto que comence a "programar" en PowerPoint, y deseo pulirlo mejor en un lenguaje como Java o Phyton.</p>
+            <p>El juego está inspirado en memes populares de Floppa y busco mejorar mis habilidades trabajando en este videojuego, ademas de divertirme en el proceso</p>
+        <span class="cerrarPopup" onclick="cerrarPopup6()">❎</span>
+        <img src="imagenes/floppaIntoTheShadows.png" class="popupImg">
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2025 RanWeb. Todos los derechos reservados.</p>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  
+</script>
+</body>
+</html>
